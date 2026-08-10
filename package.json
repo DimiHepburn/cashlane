@@ -1,5 +1,7 @@
 {
-  "name": "cashlane",
+  "name": "cashlane-live",
   "private": true,
-  "version": "1.0.0"
+  "scripts": {
+    "build": "echo static"
+  }
 }

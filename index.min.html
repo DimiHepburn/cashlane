@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cashlane — Sell digital products & invoice clients</title>
+<meta name="description" content="Cashlane is a digital storefront and invoice desk. Sell templates, kits, and guides — or bill clients — from one calm workspace."/>
+<meta name="theme-color" content="#0c0c0b"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>:root{--bg:#0c0c0b;--elev:#141413;--subtle:#1c1c1a;--muted:#242422;--fg:#f3f1ea;--fg-m:#a39e93;--fg-s:#6f6a61;--border:#2a2926;--border-s:#3d3b36;--primary:#e8e4d9;--primary-fg:#12110f;--accent:#6f9f7a;--accent-soft:#1a2a1e;--danger:#c45c4a;--warning:#c4a35a;--font-sans:"DM Sans",system-ui,sans-serif;--font-display:"Fraunces",Georgia,serif;--font-mono:"IBM Plex Mono",ui-monospace,monospace;}*{box-sizing:border-box;border-color:var(--border)}html{color-scheme:dark}body{margin:0;min-height:100dvh;background:var(--bg);color:var(--fg);font-family:var(--font-sans);-webkit-font-smoothing:antialiased}button,a.btn{cursor:pointer;font:inherit}a{color:inherit;text-decoration:none}.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}.display{font-family:var(--font-display)}.wrap{max-width:72rem;margin:0 auto;padding:0 1rem}@media(min-width:640px){.wrap{padding:0 1.5rem}}header.site{position:sticky;top:0;z-index:40;border-bottom:1px solid color-mix(in oklab,var(--border) 80%,transparent);background:color-mix(in oklab,var(--bg) 85%,transparent);backdrop-filter:blur(10px)}header.site .inner{display:flex;align-items:center;justify-content:space-between;height:3.5rem;gap:1rem}.logo{display:flex;align-items:center;gap:.65rem;font-family:var(--font-display);font-size:1.15rem}.logo .dot{width:2rem;height:2rem;border-radius:.5rem;border:1px solid var(--border);background:var(--elev);display:grid;place-items:center}.logo .dot i{width:.5rem;height:.5rem;border-radius:999px;background:var(--accent)}nav.links{display:none;gap:.25rem}@media(min-width:640px){nav.links{display:flex}}nav.links a{padding:.5rem .75rem;border-radius:.5rem;font-size:.875rem;color:var(--fg-m)}nav.links a:hover,nav.links a.active{background:var(--subtle);color:var(--fg)}.actions{display:flex;align-items:center;gap:.5rem}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;height:2.75rem;padding:0 1rem;border-radius:.5rem;border:1px solid transparent;font-size:.875rem;font-weight:500;transition:transform .15s ease,background .15s ease,border-color .15s ease}.btn:active{transform:scale(.98)}.btn-primary{background:var(--primary);color:var(--primary-fg)}.btn-primary:hover{filter:brightness(.95)}.btn-secondary{background:var(--subtle);color:var(--fg);border-color:var(--border)}.btn-secondary:hover{background:var(--muted);border-color:var(--border-s)}.btn-outline{background:transparent;color:var(--fg);border-color:var(--border)}.btn-outline:hover{background:var(--subtle)}.btn-ghost{background:transparent;color:var(--fg-m);border:none}.btn-ghost:hover{background:var(--subtle);color:var(--fg)}.btn-sm{height:2.25rem;padding:0 .75rem;font-size:.75rem}.btn-lg{height:3rem;padding:0 1.5rem;font-size:1rem}.btn-icon{width:2.75rem;padding:0;position:relative}.badge{display:inline-flex;align-items:center;border-radius:999px;border:1px solid var(--border);padding:.15rem .65rem;font-size:.75rem;font-weight:500;color:var(--fg-m);background:var(--subtle)}.badge-accent{border:none;background:var(--accent-soft);color:var(--accent)}.badge-ok{border:none;background:var(--accent-soft);color:var(--accent)}.badge-danger{border:none;background:#2a1612;color:var(--danger)}.card{border:1px solid var(--border);background:var(--elev);border-radius:1rem}.grid{display:grid;gap:1rem}.grid-3{grid-template-columns:1fr}@media(min-width:640px){.grid-3{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}.grid-2{grid-template-columns:1fr}@media(min-width:1024px){.grid-2{grid-template-columns:1.4fr .9fr}}.grid-4{grid-template-columns:1fr 1fr}@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}.stat{padding:1rem 1.25rem}.stat .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.04em;color:var(--fg-s)}.stat .val{margin-top:.25rem;font-family:var(--font-mono);font-size:1.5rem}.stat .hint{margin-top:.25rem;font-size:.75rem;color:var(--fg-m)}input,textarea,select{width:100%;height:2.75rem;border-radius:.5rem;border:1px solid var(--border);background:var(--elev);color:var(--fg);padding:0 .75rem;font:inherit;font-size:.875rem}textarea{height:auto;min-height:6rem;padding:.75rem}input:focus,textarea:focus{outline:2px solid color-mix(in oklab,var(--primary) 50%,transparent);border-color:var(--border-s)}label.field{display:block;font-size:.7rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--fg-m);margin-bottom:.4rem}.field-wrap{margin-bottom:1rem}.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--border);padding:3.5rem 0}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(to right,color-mix(in oklab,var(--fg) 4%,transparent) 1px,transparent 1px),linear-gradient(to bottom,color-mix(in oklab,var(--fg) 4%,transparent) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse 70% 60% at 50% 0%,#000 20%,transparent 75%);pointer-events:none}.hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.4rem);line-height:1.08;letter-spacing:-.02em;max-width:36rem;margin:.75rem 0 0;text-wrap:balance}.hero p.lead{max-width:36rem;color:var(--fg-m);font-size:1.05rem;line-height:1.6;margin:1rem 0 0}.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:28rem;margin-top:1.5rem}.metrics .m{border:1px solid var(--border);background:color-mix(in oklab,var(--elev) 80%,transparent);border-radius:.75rem;padding:.75rem}.metrics .m dt{font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;color:var(--fg-s)}.metrics .m dd{margin:.25rem 0 0;font-family:var(--font-mono);font-size:1.1rem}.steps{display:grid;gap:.75rem;margin-top:2.5rem}@media(min-width:640px){.steps{grid-template-columns:repeat(3,1fr)}}.step{border:1px solid var(--border);background:color-mix(in oklab,var(--elev) 90%,transparent);border-radius:1rem;padding:1.15rem}.step .ico{width:2.25rem;height:2.25rem;border-radius:.5rem;border:1px solid var(--border);background:var(--subtle);display:grid;place-items:center}.step h3{margin:.75rem 0 .25rem;font-size:.9rem;font-weight:500}.step p{margin:0;font-size:.875rem;color:var(--fg-m);line-height:1.5}section.block{padding:3.5rem 0}.sec-head{display:flex;flex-wrap:wrap;gap:.75rem;align-items:flex-end;justify-content:space-between;margin-bottom:1.5rem}.sec-head h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,1.85rem);margin:0;letter-spacing:-.02em}.sec-head p{margin:.35rem 0 0;font-size:.875rem;color:var(--fg-m)}.product{overflow:hidden;height:100%;transition:border-color .15s}.product:hover{border-color:var(--border-s)}.product .art{height:9rem;border-bottom:1px solid var(--border);background:linear-gradient(135deg,var(--accent-soft),var(--subtle));position:relative}.product .art .meta{position:absolute;left:.75rem;right:.75rem;bottom:.75rem;display:flex;justify-content:space-between;align-items:flex-end}.product .body{padding:1.15rem}.product h3{font-family:var(--font-display);font-size:1.1rem;margin:0;line-height:1.25}.product .tag{margin:.5rem 0 0;font-size:.875rem;color:var(--fg-m);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.product .del{margin:.5rem 0 0;font-size:.75rem;color:var(--fg-s)}footer.site{border-top:1px solid var(--border);margin-top:auto;padding:2.5rem 0}footer.site .inner{display:flex;flex-direction:column;gap:1rem}@media(min-width:640px){footer.site .inner{flex-direction:row;justify-content:space-between;align-items:center}}footer.site p{margin:0;font-size:.875rem;color:var(--fg-m)}#app{min-height:100dvh;display:flex;flex-direction:column}main{flex:1}.cart-count{position:absolute;top:-2px;right:-2px;min-width:1rem;height:1rem;padding:0 3px;border-radius:999px;background:var(--accent);color:var(--bg);font-size:10px;font-weight:600;display:grid;place-items:center;font-family:var(--font-mono)}.toast{position:fixed;bottom:1.25rem;right:1.25rem;z-index:50;background:var(--elev);border:1px solid var(--border);border-radius:.75rem;padding:.75rem 1rem;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:20rem;transform:translateY(120%);opacity:0;transition:transform .25s ease,opacity .25s ease}.toast.show{transform:none;opacity:1}.toast .t{font-size:.875rem;font-weight:500}.toast .d{font-size:.75rem;color:var(--fg-m);margin-top:.2rem}.bar{height:.5rem;background:var(--muted);border-radius:999px;overflow:hidden}.bar>i{display:block;height:100%;background:var(--accent);border-radius:999px}.table-row{display:grid;gap:.75rem;padding:1rem;border-top:1px solid var(--border);align-items:center}@media(min-width:640px){.table-row.prod{grid-template-columns:1.4fr .6fr .5fr .5fr auto}}.dash-nav{display:flex;flex-wrap:wrap;gap:.25rem;border:1px solid var(--border);background:var(--elev);border-radius:.75rem;padding:.25rem}.dash-nav button{border:none;background:transparent;color:var(--fg-m);padding:.5rem .9rem;border-radius:.5rem;font-size:.875rem}.dash-nav button.active{background:var(--muted);color:var(--fg);font-weight:500}.empty{border:1px dashed var(--border);border-radius:1rem;background:var(--elev);padding:3rem 1.5rem;text-align:center;color:var(--fg-m)}.detail-grid{display:grid;gap:2rem}@media(min-width:1024px){.detail-grid{grid-template-columns:1fr 1fr}}.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}.list-item{display:flex;flex-direction:column;gap:1rem;padding:1.15rem;border:1px solid var(--border);background:var(--elev);border-radius:1rem}@media(min-width:640px){.list-item{flex-direction:row;align-items:center;justify-content:space-between}}.form-grid{display:grid;gap:1rem}@media(min-width:640px){.form-grid{grid-template-columns:1fr 1fr}}.form-grid .full{grid-column:1/-1}.qty{display:flex;align-items:center;border:1px solid var(--border);border-radius:.5rem}.qty button{width:2.25rem;height:2.25rem;border:none;background:transparent;color:var(--fg)}.muted{color:var(--fg-m)}.subtle{color:var(--fg-s)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script>
+const SEED_PRODUCTS = [{"id":"prod_notion_os","name":"Life OS Notion System","tagline":"Goals, habits, and weekly reviews in one workspace","description":"A complete personal operating system for Notion: quarterly goals, habit loops, meeting notes, and a weekly review ritual. Instant PDF + duplicateable template link.","priceCents":2900,"category":"Templates","delivery":"Notion + PDF","featured":true,"sales":128},{"id":"prod_proposal_pack","name":"Freelance Proposal Pack","tagline":"Win more clients with ready-to-send proposals","description":"Five battle-tested proposal templates for design, writing, dev, and consulting gigs — plus a pricing sheet and objection-handling page.","priceCents":1900,"category":"Business","delivery":"Google Docs + DOCX","featured":true,"sales":214},{"id":"prod_pitch_deck","name":"Seed Pitch Deck Kit","tagline":"12-slide narrative that investors actually finish","description":"Story-first pitch structure with speaker notes, example metrics slides, and a one-pager leave-behind.","priceCents":3900,"category":"Business","delivery":"Keynote + PPT + Figma","featured":true,"sales":87},{"id":"prod_resume_bundle","name":"Resume + Cover Bundle","tagline":"ATS-friendly templates that still look premium","description":"Three resume layouts, matching cover letters, and a LinkedIn About section rewrite guide.","priceCents":1500,"category":"Career","delivery":"DOCX + PDF","featured":false,"sales":301},{"id":"prod_social_kit","name":"Creator Content OS","tagline":"30 days of posts planned in under an hour","description":"Content calendar, hook bank, carousel outlines, and a reusable batching workflow.","priceCents":2400,"category":"Creator","delivery":"Notion + Canva","featured":false,"sales":156},{"id":"prod_invoice_kit","name":"Client Onboarding Kit","tagline":"Contracts, kickoff forms, and payment terms","description":"Everything you send after a yes: welcome packet, scope form, simple MSA language, and payment schedule templates.","priceCents":2200,"category":"Business","delivery":"PDF + Docs","featured":false,"sales":99}];
+
+const SEED_INVOICES = [{"id":"inv_1001","number":"CL-1042","clientName":"Northline Studio","clientEmail":"ops@northline.studio","project":"Brand site redesign","amountCents":480000,"status":"sent","issuedAt":"2026-08-01T12:00:00.000Z","dueAt":"2026-08-15T12:00:00.000Z","notes":""},{"id":"inv_1002","number":"CL-1041","clientName":"Harbor Coffee","clientEmail":"maya@harbor.coffee","project":"Menu + packaging templates","amountCents":125000,"status":"paid","issuedAt":"2026-07-18T12:00:00.000Z","dueAt":"2026-08-01T12:00:00.000Z","notes":""},{"id":"inv_1003","number":"CL-1040","clientName":"Kite Analytics","clientEmail":"finance@kite.io","project":"Q3 dashboard prototype","amountCents":320000,"status":"overdue","issuedAt":"2026-07-01T12:00:00.000Z","dueAt":"2026-07-20T12:00:00.000Z","notes":""}];
+
+const money = (c) => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:c%100===0?0:2}).format(c/100);
+const fmtDate = (iso) => new Intl.DateTimeFormat("en-US",{month:"short",day:"numeric",year:"numeric"}).format(new Date(iso));
+const uid = (p="id") => p+"_"+Math.random().toString(36).slice(2,10);
+
+const DEFAULT = {
+  profile: { brandName:"Cashlane", tagline:"Sell digital products. Invoice clients. Get paid.", monthlyGoalCents:500000, supportEmail:"hello@cashlane.shop", ownerName:"Dimitri Romanov", bank: {"accountName":"Dimitri Romanov","sortCode":"04-00-06","accountNumber":"32164716","bankName":"Monzo Business","receiveOnly":true} },
+  products: SEED_PRODUCTS,
+  cart: [],
+  orders: [],
+  invoices: SEED_INVOICES,
+};
+
+function load() {
+  try {
+    const raw = localStorage.getItem("cashlane-live-v1");
+    if (!raw) return structuredClone(DEFAULT);
+    const parsed = JSON.parse(raw);
+    const merged = { ...structuredClone(DEFAULT), ...parsed };
+    merged.profile = { ...structuredClone(DEFAULT.profile), ...(parsed.profile||{}), bank: { ...{"accountName":"Dimitri Romanov","sortCode":"04-00-06","accountNumber":"32164716","bankName":"Monzo Business","receiveOnly":true}, ...((parsed.profile&&parsed.profile.bank)||{}), receiveOnly: true } };
+    return merged;
+  } catch { return structuredClone(DEFAULT); }
+}
+function save(state) {
+  localStorage.setItem("cashlane-live-v1", JSON.stringify({
+    profile: state.profile, products: state.products, cart: state.cart, orders: state.orders, invoices: state.invoices
+  }));
+}
+
+let state = load();
+let route = location.hash.slice(1) || "/";
+let shopCategory = "All";
+let dashTab = "overview";
+let formOpen = { product:false, invoice:false };
+
+function setState(patch) {
+  state = { ...state, ...patch };
+  save(state);
+  render();
+}
+
+function toast(title, desc="") {
+  const el = document.getElementById("toast");
+  el.innerHTML = `<div class="t">${title}</div>${desc?`<div class="d">${desc}</div>`:""}`;
+  el.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=>el.classList.remove("show"), 2800);
+}
+
+function cartCount(){ return state.cart.reduce((n,c)=>n+c.qty,0); }
+function cartTotal(){
+  return state.cart.reduce((s,c)=>{
+    const p=state.products.find(x=>x.id===c.productId);
+    return s+(p?p.priceCents*c.qty:0);
+  },0);
+}
+function monthRev(){
+  const now=new Date(), y=now.getFullYear(), m=now.getMonth();
+  const o=state.orders.filter(o=>{const d=new Date(o.createdAt);return o.status==="paid"&&d.getFullYear()===y&&d.getMonth()===m;})
+    .reduce((s,o)=>s+o.totalCents,0);
+  const i=state.invoices.filter(inv=>{const d=new Date(inv.issuedAt);return inv.status==="paid"&&d.getFullYear()===y&&d.getMonth()===m;})
+    .reduce((s,inv)=>s+inv.amountCents,0);
+  return o+i;
+}
+
+function navigate(path){
+  route = path;
+  location.hash = path;
+  window.scrollTo(0,0);
+  render();
+}
+
+window.addEventListener("hashchange", ()=>{
+  route = location.hash.slice(1) || "/";
+  render();
+});
+
+function header(){
+  const count = cartCount();
+  const path = route.split("?")[0];
+  const nav = (to,label) => `<a href="#${to}" class="${path===to||path.startsWith(to+"/")?"active":""}">${label}</a>`;
+  return `
+  <header class="site"><div class="wrap inner">
+    <div style="display:flex;align-items:center;gap:1.5rem;min-width:0">
+      <a href="#/" class="logo"><span class="dot"><i></i></span><span>${state.profile.brandName}</span></a>
+      <nav class="links">${nav("/shop","Shop")}${nav("/dashboard","Dashboard")}${nav("/dashboard/invoices","Invoices")}</nav>
+    </div>
+    <div class="actions">
+      <a href="#/cart" class="btn btn-ghost btn-icon" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+        ${count?`<span class="cart-count">${count}</span>`:""}
+      </a>
+    </div>
+  </div></header>`;
+}
+function footer(){
+  return `<footer class="site"><div class="wrap inner">
+    <div><p class="display" style="font-size:1rem;color:var(--fg)">${state.profile.brandName}</p>
+    <p style="margin-top:.35rem">${state.profile.tagline}</p></div>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;font-size:.875rem;color:var(--fg-m)">
+      <a href="#/shop">Shop</a><a href="#/dashboard">Dashboard</a><a href="#/dashboard/invoices">Invoices</a>
+      <span class="subtle">${state.profile.supportEmail}</span>
+    </div>
+  </div></footer>`;
+}
+
+function pageHome(){
+  const featured = state.products.filter(p=>p.featured).slice(0,3);
+  const catalog = state.products.reduce((s,p)=>s+p.priceCents,0);
+  return `
+  <section class="hero"><div class="hero-grid"></div>
+  <div class="wrap" style="position:relative">
+    <span class="badge badge-accent">Online income desk</span>
+    <h1>Start selling online today — products, invoices, revenue.</h1>
+    <p class="lead">${state.profile.tagline} Launch a digital storefront, bill clients, and track what you earned this month.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary btn-lg" href="#/shop">Browse the shop →</a>
+      <a class="btn btn-secondary btn-lg" href="#/dashboard">Open seller dashboard</a>
+    </div>
+    <dl class="metrics">
+      <div class="m"><dt>Products</dt><dd class="mono">${state.products.length}</dd></div>
+      <div class="m"><dt>Catalog</dt><dd class="mono">${money(catalog)}</dd></div>
+      <div class="m"><dt>Goal</dt><dd class="mono">${money(state.profile.monthlyGoalCents)}</dd></div>
+    </dl>
+    <div class="steps">
+      <div class="step"><div class="ico" aria-hidden="true">◆</div><h3>Sell downloads</h3><p>Templates and kits with checkout. Sales land on your dashboard.</p></div>
+      <div class="step"><div class="ico" aria-hidden="true">▣</div><h3>Invoice clients</h3><p>Bill freelance projects and mark invoices paid when money lands.</p></div>
+      <div class="step"><div class="ico" aria-hidden="true">▲</div><h3>Hit a goal</h3><p>Track monthly revenue against a target you can edit anytime.</p></div>
+    </div>
+  </div></section>
+  <section class="block"><div class="wrap">
+    <div class="sec-head"><div><h2>Featured products</h2><p>Ready-made digital goods — sell as-is or replace with your own.</p></div>
+    <a class="btn btn-outline" href="#/shop">View all →</a></div>
+    <div class="grid grid-3">${featured.map(productCard).join("")}</div>
+  </div></section>
+  <section style="border-top:1px solid var(--border);background:color-mix(in oklab,var(--elev) 40%,transparent)">
+    <div class="wrap" style="padding:3rem 0">
+      <div class="card" style="padding:1.5rem 2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;background:var(--bg)">
+        <div style="max-width:36rem"><h2 class="display" style="margin:0;font-size:1.5rem">Try the full money loop</h2>
+        <p class="muted" style="margin:.5rem 0 0;font-size:.875rem;line-height:1.55">Buy a product, see the sale on the dashboard, create an invoice and mark it paid. Data saves in this browser.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem">
+          <a class="btn btn-primary" href="#/shop">Make a sale</a>
+          <a class="btn btn-secondary" href="#/dashboard/invoices">Create invoice</a>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function productCard(p){
+  return `<a class="card product" href="#/product/${p.id}">
+    <div class="art"><div class="meta"><span class="badge">${p.category}</span><span class="mono" style="font-size:.875rem">${money(p.priceCents)}</span></div></div>
+    <div class="body"><h3>${esc(p.name)}</h3><p class="tag">${esc(p.tagline)}</p><p class="del">${esc(p.delivery)}</p></div>
+  </a>`;
+}
+
+function pageShop(){
+  const cats = ["All",...new Set(state.products.map(p=>p.category))].sort((a,b)=>a==="All"?-1:b==="All"?1:a.localeCompare(b));
+  const list = shopCategory==="All"?state.products:state.products.filter(p=>p.category===shopCategory);
+  return `<div class="wrap" style="padding:2.5rem 0">
+    <h1 class="display" style="font-size:2rem;margin:0">Digital shop</h1>
+    <p class="muted" style="margin:.5rem 0 0">Instant-download products. Checkout books the sale to your dashboard.</p>
+    <div class="filters" style="margin-top:1.5rem">${cats.map(c=>`<button class="btn btn-sm ${shopCategory===c?"btn-primary":"btn-outline"}" data-cat="${c}">${c}</button>`).join("")}</div>
+    <div class="grid grid-3">${list.map(productCard).join("")||"<p class='muted'>No products in this category.</p>"}</div>
+  </div>`;
+}
+
+function pageProduct(id){
+  const p = state.products.find(x=>x.id===id);
+  if(!p) return `<div class="wrap" style="padding:3rem 0"><p class="muted">Product not found.</p><a class="btn btn-secondary" href="#/shop">Back to shop</a></div>`;
+  return `<div class="wrap" style="padding:2.5rem 0">
+    <a class="btn btn-ghost btn-sm" href="#/shop" style="margin-left:-.5rem;margin-bottom:1rem">← Back to shop</a>
+    <div class="detail-grid">
+      <div class="card" style="min-height:18rem;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-soft),var(--elev))">
+        <div style="position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between">
+          <span class="badge">${p.category}</span>
+          <div><div class="mono" style="font-size:2rem">${money(p.priceCents)}</div><div class="muted" style="font-size:.875rem;margin-top:.25rem">${esc(p.delivery)}</div></div>
+        </div>
+      </div>
+      <div>
+        <h1 class="display" style="font-size:clamp(1.75rem,3vw,2.25rem);margin:0;text-wrap:balance">${esc(p.name)}</h1>
+        <p class="muted" style="font-size:1.1rem;margin:.75rem 0 0">${esc(p.tagline)}</p>
+        <p class="muted" style="margin:1.25rem 0 0;line-height:1.6;font-size:.95rem">${esc(p.description)}</p>
+        <ul class="muted" style="margin:1.25rem 0 0;padding:0;list-style:none;font-size:.875rem">
+          <li style="margin:.4rem 0">✓ Instant download after checkout</li>
+          <li style="margin:.4rem 0">✓ Commercial use for your clients</li>
+          <li style="margin:.4rem 0">✓ Sale tracked in your dashboard</li>
+        </ul>
+        <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem">
+          <button class="btn btn-primary btn-lg" data-add="${p.id}" style="flex:1">Add to cart</button>
+          <a class="btn btn-secondary btn-lg" href="#/cart" style="flex:1">Go to cart</a>
+        </div>
+        <div class="card" style="margin-top:1.25rem;padding:1rem;display:flex;justify-content:space-between;font-size:.875rem">
+          <span class="muted">Lifetime sales</span><span class="mono">${p.sales}</span>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function pageCart(){
+  const lines = state.cart.map(c=>{
+    const p=state.products.find(x=>x.id===c.productId); return p?{...c,product:p}:null;
+  }).filter(Boolean);
+  if(!lines.length) return `<div class="wrap" style="padding:2.5rem 0">
+    <h1 class="display" style="font-size:2rem;margin:0">Cart</h1>
+    <div class="empty" style="margin-top:2rem"><p>Your cart is empty.</p><a class="btn btn-primary" href="#/shop" style="margin-top:1rem">Browse products</a></div>
+  </div>`;
+  return `<div class="wrap" style="padding:2.5rem 0">
+    <h1 class="display" style="font-size:2rem;margin:0">Cart</h1>
+    <p class="muted" style="margin:.5rem 0 0;font-size:.875rem">Demo checkout simulates a charge and books the sale.</p>
+    <div class="grid grid-2" style="margin-top:2rem">
+      <div style="display:grid;gap:.75rem">${lines.map(({product,qty})=>`
+        <div class="card" style="padding:1rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between">
+          <div><a href="#/product/${product.id}" style="font-weight:500">${esc(product.name)}</a>
+          <div class="muted" style="font-size:.875rem;margin-top:.2rem">${money(product.priceCents)} each</div></div>
+          <div style="display:flex;align-items:center;gap:.75rem">
+            <div class="qty">
+              <button data-qty="${product.id}:-1" aria-label="Decrease">−</button>
+              <span class="mono" style="width:2rem;text-align:center;font-size:.875rem">${qty}</span>
+              <button data-qty="${product.id}:1" aria-label="Increase">+</button>
+            </div>
+            <span class="mono" style="width:4.5rem;text-align:right;font-size:.875rem">${money(product.priceCents*qty)}</span>
+            <button class="btn btn-ghost btn-sm" data-remove="${product.id}">Remove</button>
+          </div>
+        </div>`).join("")}</div>
+      <div class="card" style="padding:1.25rem;height:fit-content;position:sticky;top:5rem">
+        <h2 class="display" style="margin:0 0 1rem;font-size:1.25rem">Checkout</h2>
+        <form id="checkout-form">
+          <div class="field-wrap"><label class="field" for="cname">Name</label><input id="cname" name="name" required value="Alex Rivera"/></div>
+          <div class="field-wrap"><label class="field" for="cemail">Email</label><input id="cemail" name="email" type="email" required value="alex@example.com"/></div>
+          <div style="display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:1rem;margin-bottom:1rem">
+            <span class="muted">Total</span><span class="mono" style="font-size:1.25rem">${money(cartTotal())}</span>
+          </div>
+          <button class="btn btn-primary btn-lg" style="width:100%" type="submit">Pay now (demo)</button>
+          <p class="subtle" style="text-align:center;font-size:.75rem;margin:.75rem 0 0">No real charges. Sale is recorded for your dashboard.</p>
+        </form>
+      </div>
+    </div>
+  </div>`;
+}
+
+
+function bankCard(){
+  const b = state.profile.bank || {"accountName":"Dimitri Romanov","sortCode":"04-00-06","accountNumber":"32164716","bankName":"Monzo Business","receiveOnly":true};
+  const sc = String(b.sortCode).replace(/\\D/g,"");
+  const sort = sc.length===6 ? sc.slice(0,2)+"-"+sc.slice(2,4)+"-"+sc.slice(4,6) : b.sortCode;
+  return `<div class="card" style="padding:1.15rem 1.25rem;margin-bottom:1.25rem">
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.5rem">
+      <strong class="display" style="font-size:1rem">Pay into this account</strong>
+      <span class="badge badge-accent">Receive only</span>
+    </div>
+    <p class="muted" style="font-size:.8rem;margin:0 0 .75rem">Client bank transfers only. Never used to send money out.</p>
+    <div style="display:grid;gap:.5rem;grid-template-columns:1fr 1fr;font-size:.875rem">
+      <div><div class="subtle" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.04em">Account name</div><div style="font-weight:500">${esc(b.accountName)}</div></div>
+      <div><div class="subtle" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.04em">Bank</div><div style="font-weight:500">${esc(b.bankName)}</div></div>
+      <div><div class="subtle" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.04em">Sort code</div><div class="mono">${sort}</div></div>
+      <div><div class="subtle" style="font-size:.65rem;text-transform:uppercase;letter-spacing:.04em">Account number</div><div class="mono">${esc(b.accountNumber)}</div></div>
+    </div>
+  </div>`;
+}
+
+function pageDashboard(){
+  const path = route;
+  const tab = path.includes("/products")?"products":path.includes("/invoices")?"invoices":"overview";
+  dashTab = tab;
+  const nav = `<div class="dash-nav">
+    <button class="${tab==="overview"?"active":""}" data-nav="/dashboard">Overview</button>
+    <button class="${tab==="products"?"active":""}" data-nav="/dashboard/products">Products</button>
+    <button class="${tab==="invoices"?"active":""}" data-nav="/dashboard/invoices">Invoices</button>
+  </div>`;
+  let body = "";
+  if(tab==="overview") body = dashOverview();
+  else if(tab==="products") body = dashProducts();
+  else body = dashInvoices();
+  return `<div class="wrap" style="padding:2rem 0 3rem">
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-end;justify-content:space-between;margin-bottom:1.5rem">
+      <div><h1 class="display" style="margin:0;font-size:1.85rem">Seller dashboard</h1>
+      <p class="muted" style="margin:.35rem 0 0;font-size:.875rem">Revenue, products, and client invoices in one place.</p></div>
+      ${nav}
+    </div>${body}
+  </div>`;
+}
+
+function dashOverview(){
+  const m = monthRev();
+  const bankTop = bankCard();
+  const productRev = state.orders.filter(o=>o.status==="paid").reduce((s,o)=>s+o.totalCents,0);
+  const invPaid = state.invoices.filter(i=>i.status==="paid").reduce((s,i)=>s+i.amountCents,0);
+  const outstanding = state.invoices.filter(i=>i.status==="sent"||i.status==="overdue").reduce((s,i)=>s+i.amountCents,0);
+  const goalPct = Math.min(100, Math.round((m/Math.max(state.profile.monthlyGoalCents,1))*100));
+  const top = [...state.products].sort((a,b)=>b.sales-a.sales).slice(0,5);
+  return `
+  ${bankTop}
+  <div class="grid grid-4" style="margin-bottom:1.5rem">
+    <div class="card stat"><div class="lbl">This month</div><div class="val">${money(m)}</div><div class="hint">${goalPct}% of goal</div></div>
+    <div class="card stat"><div class="lbl">Product sales</div><div class="val">${money(productRev)}</div><div class="hint">${state.orders.length} orders</div></div>
+    <div class="card stat"><div class="lbl">Invoices paid</div><div class="val">${money(invPaid)}</div><div class="hint">${state.invoices.filter(i=>i.status==="paid").length} paid</div></div>
+    <div class="card stat"><div class="lbl">Outstanding</div><div class="val">${money(outstanding)}</div><div class="hint">Sent + overdue</div></div>
+  </div>
+  <div class="grid grid-2">
+    <div class="card" style="padding:1.25rem">
+      <h3 class="display" style="margin:0 0 1rem;font-size:1.1rem">Monthly goal</h3>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:1rem">
+        <div class="mono" style="font-size:1.75rem">${money(m)}</div>
+        <div class="muted" style="font-size:.875rem">of ${money(state.profile.monthlyGoalCents)}</div>
+      </div>
+      <div class="bar" style="margin:1rem 0"><i style="width:${goalPct}%"></i></div>
+      <label class="field" for="goal">Goal amount (USD)</label>
+      <input id="goal" type="number" min="100" step="100" value="${Math.round(state.profile.monthlyGoalCents/100)}"/>
+      <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:1rem">
+        <a class="btn btn-secondary" href="#/shop">Make a demo sale →</a>
+        <button class="btn btn-ghost" id="reset-demo">Reset demo data</button>
+      </div>
+    </div>
+    <div class="card">
+      <div style="padding:1.25rem;display:flex;justify-content:space-between;align-items:center">
+        <h3 class="display" style="margin:0;font-size:1.1rem">Recent orders</h3>
+        <a class="btn btn-outline btn-sm" href="#/shop">Shop</a>
+      </div>
+      ${state.orders.length?`<ul style="list-style:none;margin:0;padding:0">${state.orders.slice(0,5).map(o=>`
+        <li style="display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;border-top:1px solid var(--border)">
+          <div><div style="font-size:.875rem;font-weight:500">${esc(o.customerName)}</div>
+          <div class="subtle" style="font-size:.75rem">${fmtDate(o.createdAt)} · ${o.items.length} item${o.items.length===1?"":"s"}</div></div>
+          <span class="mono" style="font-size:.875rem">${money(o.totalCents)}</span>
+        </li>`).join("")}</ul>`:`<p class="muted" style="padding:0 1.25rem 1.25rem;font-size:.875rem">No product orders yet. Checkout from the shop to book a sale.</p>`}
+    </div>
+  </div>
+  <div class="card" style="margin-top:1.5rem">
+    <div style="padding:1.25rem;display:flex;justify-content:space-between;align-items:center">
+      <h3 class="display" style="margin:0;font-size:1.1rem">Top products</h3>
+      <a class="btn btn-outline btn-sm" href="#/dashboard/products">Manage</a>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0">${top.map(p=>`
+      <li style="display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;border-top:1px solid var(--border)">
+        <div><div style="font-size:.875rem;font-weight:500">${esc(p.name)}</div>
+        <div class="subtle" style="font-size:.75rem">${p.sales} sold · ${money(p.priceCents)}</div></div>
+        <span class="mono muted" style="font-size:.875rem">${money(p.sales*p.priceCents)}</span>
+      </li>`).join("")}</ul>
+  </div>`;
+}
+
+function dashProducts(){
+  return `
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:1.25rem">
+    <div><h2 class="display" style="margin:0;font-size:1.25rem">Products</h2><p class="muted" style="margin:.25rem 0 0;font-size:.875rem">What you sell in the public shop.</p></div>
+    <button class="btn btn-primary" id="toggle-prod">${formOpen.product?"Close form":"New product"}</button>
+  </div>
+  ${formOpen.product?`<div class="card" style="padding:1.25rem;margin-bottom:1.25rem">
+    <form id="prod-form" class="form-grid">
+      <div class="full field-wrap"><label class="field">Name</label><input name="name" required placeholder="Freelance rate calculator"/></div>
+      <div class="full field-wrap"><label class="field">Tagline</label><input name="tagline" placeholder="Price projects with confidence"/></div>
+      <div class="field-wrap"><label class="field">Price (USD)</label><input name="price" type="number" min="1" step="0.01" value="19" required/></div>
+      <div class="field-wrap"><label class="field">Category</label><input name="category" value="Templates"/></div>
+      <div class="field-wrap"><label class="field">Delivery</label><input name="delivery" value="PDF + link"/></div>
+      <div class="full field-wrap"><label class="field">Description</label><textarea name="description" placeholder="What the buyer gets…"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Publish product</button></div>
+    </form>
+  </div>`:""}
+  <div class="card" style="overflow:hidden">
+    ${state.products.map(p=>`
+      <div class="table-row prod">
+        <div><div style="font-weight:500">${esc(p.name)}</div><div class="muted" style="font-size:.75rem">${esc(p.tagline)}</div></div>
+        <div><span class="badge">${esc(p.category)}</span></div>
+        <div class="mono" style="font-size:.875rem">${money(p.priceCents)}</div>
+        <div class="mono muted" style="font-size:.875rem">${p.sales} sold</div>
+        <div style="display:flex;gap:.35rem;justify-content:flex-end">
+          <button class="btn btn-secondary btn-sm" data-feature="${p.id}">${p.featured?"Featured":"Feature"}</button>
+          <button class="btn btn-ghost btn-sm" data-del-prod="${p.id}">Delete</button>
+        </div>
+      </div>`).join("")}
+  </div>`;
+}
+
+function dashInvoices(){
+  const open = state.invoices.filter(i=>i.status==="sent"||i.status==="overdue").reduce((s,i)=>s+i.amountCents,0);
+  return `
+  ${bankCard()}
+  <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:1.25rem">
+    <div><h2 class="display" style="margin:0;font-size:1.25rem">Invoices</h2>
+    <p class="muted" style="margin:.25rem 0 0;font-size:.875rem">Bill clients for project work. <span style="color:var(--fg)">${money(open)} open</span></p></div>
+    <button class="btn btn-primary" id="toggle-inv">${formOpen.invoice?"Close form":"New invoice"}</button>
+  </div>
+  ${formOpen.invoice?`<div class="card" style="padding:1.25rem;margin-bottom:1.25rem">
+    <form id="inv-form" class="form-grid">
+      <div class="field-wrap"><label class="field">Client name</label><input name="clientName" required placeholder="Acme Co."/></div>
+      <div class="field-wrap"><label class="field">Client email</label><input name="clientEmail" type="email" placeholder="ops@acme.com"/></div>
+      <div class="full field-wrap"><label class="field">Project</label><input name="project" required placeholder="Landing page redesign"/></div>
+      <div class="field-wrap"><label class="field">Amount (USD)</label><input name="amount" type="number" min="1" step="0.01" value="2500" required/></div>
+      <div class="field-wrap"><label class="field">Due in (days)</label><input name="dueDays" type="number" min="1" value="14"/></div>
+      <div class="full field-wrap"><label class="field">Notes</label><textarea name="notes" placeholder="Payment terms…"></textarea></div>
+      <div class="full"><button class="btn btn-primary" type="submit">Send invoice</button></div>
+    </form>
+  </div>`:""}
+  <div style="display:grid;gap:.75rem">
+    ${state.invoices.map(inv=>{
+      const badge = inv.status==="paid"?"badge-ok":inv.status==="overdue"?"badge-danger":"";
+      return `<div class="list-item">
+        <div>
+          <div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center">
+            <span class="mono subtle" style="font-size:.75rem">${inv.number}</span>
+            <span class="badge ${badge}">${inv.status}</span>
+          </div>
+          <div style="font-weight:500;margin-top:.35rem">${esc(inv.clientName)}</div>
+          <div class="muted" style="font-size:.875rem">${esc(inv.project)}</div>
+          <div class="subtle" style="font-size:.75rem;margin-top:.25rem">Issued ${fmtDate(inv.issuedAt)} · Due ${fmtDate(inv.dueAt)}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.75rem;align-items:flex-start">
+          <div class="mono" style="font-size:1.25rem">${money(inv.amountCents)}</div>
+          <div class="subtle" style="font-size:.7rem;max-width:16rem;text-align:left">Bank transfer · ${esc((state.profile.bank||{}).accountName||"")} · sort ${esc((state.profile.bank||{}).sortCode||"")} · a/c ${esc((state.profile.bank||{}).accountNumber||"")} · ref ${inv.number} · receive only</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+            ${["sent","paid","overdue"].map(st=>`<button class="btn btn-sm ${inv.status===st?"btn-primary":"btn-outline"}" data-inv-status="${inv.id}:${st}">${st}</button>`).join("")}
+            <button class="btn btn-ghost btn-sm" data-del-inv="${inv.id}">Delete</button>
+          </div>
+        </div>
+      </div>`;
+    }).join("")||"<p class='muted'>No invoices yet.</p>"}
+  </div>`;
+}
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&","<":"<",">":">","\"":""","'":"&#39;"}[c]));}
+
+function render(){
+  const path = route.split("?")[0];
+  let body = "";
+  if(path==="/"||path==="") body = pageHome();
+  else if(path==="/shop")) body = pageShop();
+  else if(path.startsWith("/product/")) body = pageProduct(path.slice("/product/".length));
+  else if(path==="/cart")) body = pageCart();
+  else if(path.startsWith("/dashboard")) body = pageDashboard();
+  else body = pageHome();
+
+  document.getElementById("app").innerHTML = header()+ `<main>${body}</main>` + footer();
+  bind();
+}
+
+function bind(){
+  document.querySelectorAll("[data-cat]").forEach(el=>el.onclick=()=>{shopCategory=el.dataset.cat;render();});
+  document.querySelectorAll("[data-add]").forEach(el=>el.onclick=()=>{
+    const id=el.dataset.add;
+    const cart=[...state.cart];
+    const ex=cart.find(c=>c.productId===id);
+    if(ex) ex.qty++; else cart.push({productId:id,qty:1});
+    setState({cart}); toast("Added to cart", state.products.find(p=>p.id===id)?.name||"");
+  });
+  document.querySelectorAll("[data-qty]").forEach(el=>el.onclick=()=>{
+    const [id,d]=el.dataset.qty.split(":");
+    const delta=Number(d);
+    let cart=state.cart.map(c=>c.productId===id?{...c,qty:c.qty+delta}:c).filter(c=>c.qty>0);
+    setState({cart});
+  });
+  document.querySelectorAll("[data-remove]").forEach(el=>el.onclick=()=>setState({cart:state.cart.filter(c=>c.productId!==el.dataset.remove)}));
+  const cf=document.getElementById("checkout-form");
+  if(cf) cf.onsubmit=(e)=>{
+    e.preventDefault();
+    const fd=new FormData(cf);
+    const items=state.cart.map(c=>{
+      const p=state.products.find(x=>x.id===c.productId);
+      return p?{productId:p.id,name:p.name,priceCents:p.priceCents,qty:c.qty}:null;
+    }).filter(Boolean);
+    if(!items.length) return;
+    const totalCents=items.reduce((s,i)=>s+i.priceCents*i.qty,0);
+    const order={id:uid("ord"),items,totalCents,customerName:String(fd.get("name")),customerEmail:String(fd.get("email")),createdAt:new Date().toISOString(),status:"paid"};
+    const products=state.products.map(p=>{
+      const sold=items.find(i=>i.productId===p.id);
+      return sold?{...p,sales:p.sales+sold.qty}:p;
+    });
+    setState({orders:[order,...state.orders],cart:[],products});
+    toast("Payment received", money(totalCents)+" · Order "+order.id.slice(-8));
+    navigate("/dashboard");
+  };
+  document.querySelectorAll("[data-nav]").forEach(el=>el.onclick=()=>navigate(el.dataset.nav));
+  const goal=document.getElementById("goal");
+  if(goal) goal.onchange=()=>setState({profile:{...state.profile,monthlyGoalCents:Math.max(100,Math.round(Number(goal.value)||0)*100)}});
+  const reset=document.getElementById("reset-demo");
+  if(reset) reset.onclick=()=>{state=structuredClone(DEFAULT);save(state);toast("Demo data reset");render();};
+  const tp=document.getElementById("toggle-prod");
+  if(tp) tp.onclick=()=>{formOpen.product=!formOpen.product;render();};
+  const ti=document.getElementById("toggle-inv");
+  if(ti) ti.onclick=()=>{formOpen.invoice=!formOpen.invoice;render();};
+  const pf=document.getElementById("prod-form");
+  if(pf) pf.onsubmit=(e)=>{
+    e.preventDefault();
+    const fd=new FormData(pf);
+    const priceCents=Math.round(parseFloat(String(fd.get("price")||"0"))*100);
+    if(priceCents<=0) return toast("Price required");
+    const product={
+      id:uid("prod"), name:String(fd.get("name")).trim(),
+      tagline:String(fd.get("tagline")||"Digital download").trim(),
+      description:String(fd.get("description")||"A ready-to-use digital product.").trim(),
+      priceCents, category:String(fd.get("category")||"General").trim(),
+      delivery:String(fd.get("delivery")||"Download").trim(), featured:false, sales:0
+    };
+    formOpen.product=false;
+    setState({products:[product,...state.products]});
+    toast("Product published", product.name);
+  };
+  document.querySelectorAll("[data-feature]").forEach(el=>el.onclick=()=>{
+    setState({products:state.products.map(p=>p.id===el.dataset.feature?{...p,featured:!p.featured}:p)});
+  });
+  document.querySelectorAll("[data-del-prod]").forEach(el=>el.onclick=()=>{
+    setState({products:state.products.filter(p=>p.id!==el.dataset.delProd), cart:state.cart.filter(c=>c.productId!==el.dataset.delProd)});
+    toast("Product removed");
+  });
+  const inf=document.getElementById("inv-form");
+  if(inf) inf.onsubmit=(e)=>{
+    e.preventDefault();
+    const fd=new FormData(inf);
+    const amountCents=Math.round(parseFloat(String(fd.get("amount")||"0"))*100);
+    if(amountCents<=0) return toast("Amount required");
+    const due=new Date(); due.setDate(due.getDate()+Math.max(1,parseInt(String(fd.get("dueDays")||"14"),10)));
+    const inv={
+      id:uid("inv"), number:"CL-"+(1040+state.invoices.length+1),
+      clientName:String(fd.get("clientName")).trim(),
+      clientEmail:String(fd.get("clientEmail")||"client@example.com").trim(),
+      project:String(fd.get("project")).trim(), amountCents, status:"sent",
+      issuedAt:new Date().toISOString(), dueAt:due.toISOString(), notes:String(fd.get("notes")||"").trim()
+    };
+    formOpen.invoice=false;
+    setState({invoices:[inv,...state.invoices]});
+    toast("Invoice sent", inv.clientName+" · "+money(amountCents));
+  };
+  document.querySelectorAll("[data-inv-status]").forEach(el=>el.onclick=()=>{
+    const [id,st]=el.dataset.invStatus.split(":");
+    setState({invoices:state.invoices.map(i=>i.id===id?{...i,status:st}:i)});
+    toast("Invoice marked "+st);
+  });
+  document.querySelectorAll("[data-del-inv]").forEach(el=>el.onclick=()=>{
+    setState({invoices:state.invoices.filter(i=>i.id!==el.dataset.delInv)});
+    toast("Invoice deleted");
+  });
+}
+
+render();
+</script>
+</body>
+</html>
