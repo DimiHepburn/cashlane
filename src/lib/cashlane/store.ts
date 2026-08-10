@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { defaultProfile, seedInvoices, seedProducts } from "./seed";
+import { businessBank, defaultProfile, seedInvoices, seedProducts } from "./seed";
 import type {
   CartItem,
   Invoice,
@@ -38,6 +38,19 @@ type CashlaneState = {
   resetDemo: () => void;
 };
 
+function withBank(profile: StoreProfile | (Omit<StoreProfile, "bank"> & { bank?: StoreProfile["bank"] })): StoreProfile {
+  return {
+    ...defaultProfile,
+    ...profile,
+    ownerName: profile.ownerName || defaultProfile.ownerName,
+    bank: {
+      ...businessBank,
+      ...(profile.bank ?? {}),
+      receiveOnly: true as const,
+    },
+  };
+}
+
 export const useCashlane = create<CashlaneState>()(
   persist(
     (set, get) => ({
@@ -49,7 +62,15 @@ export const useCashlane = create<CashlaneState>()(
       hydrated: false,
       setHydrated: (v) => set({ hydrated: v }),
       updateProfile: (patch) =>
-        set((s) => ({ profile: { ...s.profile, ...patch } })),
+        set((s) => ({
+          profile: withBank({
+            ...s.profile,
+            ...patch,
+            bank: patch.bank
+              ? { ...businessBank, ...patch.bank, receiveOnly: true as const }
+              : s.profile.bank,
+          }),
+        })),
       addToCart: (productId) =>
         set((s) => {
           const existing = s.cart.find((c) => c.productId === productId);
@@ -173,7 +194,10 @@ export const useCashlane = create<CashlaneState>()(
     {
       name: "cashlane-v1",
       onRehydrateStorage: () => (state) => {
-        state?.setHydrated(true);
+        if (state) {
+          state.profile = withBank(state.profile);
+          state.setHydrated(true);
+        }
       },
       partialize: (s) => ({
         profile: s.profile,
@@ -182,6 +206,14 @@ export const useCashlane = create<CashlaneState>()(
         orders: s.orders,
         invoices: s.invoices,
       }),
+      merge: (persisted, current) => {
+        const p = (persisted ?? {}) as Partial<CashlaneState>;
+        return {
+          ...current,
+          ...p,
+          profile: withBank(p.profile ?? current.profile),
+        };
+      },
     },
   ),
 );

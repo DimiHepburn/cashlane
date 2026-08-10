@@ -41,10 +41,20 @@ export type Invoice = {
   notes: string;
 };
 
+export type BankAccount = {
+  accountName: string;
+  sortCode: string;
+  accountNumber: string;
+  bankName: string;
+  /** Always true — this account is for inbound payouts only */
+  receiveOnly: true;
+};
+
 export type StoreProfile = {
   brandName: string;
   tagline: string;
   ownerName: string;
   supportEmail: string;
   monthlyGoalCents: number;
+  bank: BankAccount;
 };

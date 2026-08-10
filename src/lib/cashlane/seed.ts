@@ -1,11 +1,21 @@
 import type { Invoice, Product, StoreProfile } from "./types";
 
+/** Business bank for receiving payments only — never outbound. */
+export const businessBank = {
+  accountName: "Dimitri Romanov",
+  sortCode: "04-00-06",
+  accountNumber: "32164716",
+  bankName: "Monzo Business",
+  receiveOnly: true as const,
+};
+
 export const defaultProfile: StoreProfile = {
   brandName: "Cashlane",
   tagline: "Sell digital products. Invoice clients. Get paid.",
-  ownerName: "You",
+  ownerName: "Dimitri Romanov",
   supportEmail: "hello@cashlane.shop",
   monthlyGoalCents: 500_000,
+  bank: businessBank,
 };
 
 export const seedProducts: Product[] = [
@@ -112,7 +122,7 @@ export const seedInvoices: Invoice[] = [
     status: "paid",
     issuedAt: "2026-07-18T12:00:00.000Z",
     dueAt: "2026-08-01T12:00:00.000Z",
-    notes: "Paid via ACH.",
+    notes: "Paid via bank transfer.",
   },
   {
     id: "inv_1003",

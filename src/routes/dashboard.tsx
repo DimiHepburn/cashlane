@@ -11,6 +11,7 @@ import {
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { DashboardNav } from "@/components/dashboard-nav";
+import { BankReceiveCard } from "@/components/bank-receive-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -79,6 +80,8 @@ function DashboardHome() {
 
   return (
     <div className="space-y-6">
+      <BankReceiveCard bank={profile.bank} />
+
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard
           label="This month"
